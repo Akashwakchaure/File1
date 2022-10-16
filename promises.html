@@ -1,0 +1,22 @@
+<script>
+    var record=new Promise((res,rej)=>{
+        // promises has 3 states=> 1.resolve 2.rejected 3.Pending
+        console.log(typeof res,typeof rej);
+        res("Task is Complited")
+       //rej("Task is incomplited")
+    })
+    console.log(record);
+
+    record.then((value)=>{
+                            //then=> it is a handler to resolve value
+        console.log(value);
+        
+    }).catch((error)=>{
+        console.log(error);
+        
+    }).finally(()=>{
+        console.log("Proceed for next task");
+        
+    })            
+    
+</script>
